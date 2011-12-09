@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<project name="Fedora2OREServ" default="build_war">
+	<property name="src.dir"     value="${basedir}/src"/>
+	<property name="web.inf"     value="${basedir}/WEB-INF"/>
+	<property name="classes.dir" value="${basedir}/classes"/>
+	<property name="lib.dir"     value="${basedir}/lib"/>
+	
+	<path id="classpath">
+		<fileset dir="${lib.dir}" includes="**/*.jar"/>
+	</path>
+	
+	<target name="clean">
+		<delete dir="${classes.dir}"/>
+	</target>
+	
+	<target name="compile" depends="clean">
+		<mkdir dir="${classes.dir}"/>
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath"/>
+		<copy file="${src.dir}/configuration.properties" todir="${classes.dir}" />
+	</target>
+	
+	<target name="build_war" depends="compile">
+		<war destfile="${ant.project.name}.war" webxml="${basedir}/web.xml">
+			<lib dir="${lib.dir}" />
+			<classes dir="${classes.dir}" />
+		</war>
+		<fileset file="${src.dir}/configuration.properties" />
+		<fileset file="${src.dir}/log4j.xml" />
+		<delete dir="${classes.dir}" />
+	</target>
+	
+</project>
