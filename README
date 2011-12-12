@@ -1,0 +1,19 @@
+Project: Fedora2OREServ
+===================
+Subproject of:        eco4r - Exposing Compound Objects for Repositories
+Web Page:             http://www.eco4r.org
+version: 	      1.0
+Funded By:            DFG - German Research Foundation
+Co-operation:         HBZ NRW & University Library Bielefeld
+Documentation site:   http://trac.eco4r.org/trac/eco4r/wiki/Fedora2ORE
+Developer:            Anouar Boulal
+
+-------------------- 
+
+The Fedora to OAI-ORE tool "Fedora2ORE" enables the generation of OAI-ORE Resource-Maps 
+from a Fedora repository. Based on the  Fedora Digital Object Model, Fedora2ORE can 
+explore properties and relationships about a digital object and map them to the OAI-ORE data Model.
+Fedora2ORE is available in two different distributions, a Java distribution and RESTFul Webservice 
+"Fedora2OERServ" that simply encloses the Java-distribution and provides its functionality in a 
+RESTFul manner.
+
