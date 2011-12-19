@@ -3,6 +3,7 @@ Project: Fedora2OREServ
 Subproject of:        eco4r - Exposing Compound Objects for Repositories
 Web Page:             http://www.eco4r.org
 version: 	      1.0
+Fedora Versions:      3.3 and 3.4
 Funded By:            DFG - German Research Foundation
 Co-operation:         HBZ NRW & University Library Bielefeld
 Documentation site:   http://trac.eco4r.org/trac/eco4r/wiki/Fedora2ORE
